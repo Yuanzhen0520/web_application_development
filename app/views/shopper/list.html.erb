@@ -1,0 +1,13 @@
+<h1>Shopper View</h1>
+
+<% @products.each do |product|%>
+    <div class='entry'>
+        <%=image_tag(product.image)%>
+        <h3><%=product.name%></h3>
+        <p><%=product.description%></p><br><br>
+        <h4 class="div.price_line"><%=number_to_currency(product.price)%></h4>
+        <%=button_to('Add to Cart', listitems_path(product_id: product.id), class: 'add_to_cart', remote: true)%>
+    </div>
+<%end%>
+
+

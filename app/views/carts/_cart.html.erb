@@ -1,0 +1,19 @@
+<div id="<%= dom_id cart %>">
+</div>
+<p style="color: green"><%= notice %></p>
+
+<h3>Items in your shopping cart</h3>
+<ul>
+  <% @cart.listitems.each do |item| %>
+    <li> <%= item.product.name %> - <%=item.product.price%>: <%=item.quantity%></li>
+  <%end%>
+</ul>
+
+<p>Total Price: <%=@cart.total_price%></p>
+
+<%=button_to 'Empty Cart', @cart, method: :delete, data: {confirm: 'Are you sure?'}%>
+
+<%=button_to 'Check Out', new_order_path, method: :get%>
+
+
+

@@ -1,0 +1,25 @@
+<div id="<%= dom_id product %>" class="<%=cycle('list_line_even','list_line_odd')%>">
+  <p>
+    <strong>Name:</strong>
+    <%= product.name %>
+  </p>
+
+  <p class="list_description">
+    <strong>Description:</strong>
+    <%= product.description %>
+  </p>
+
+  <p class="list_image">
+    <%= image_tag(product.image)%>
+  </p>
+
+  <p>
+    <strong>Price:</strong>
+    <%= product.price %>
+  </p>
+
+  <p>
+      <%= link_to "Show this product", product %>
+    </p>
+
+</div>
