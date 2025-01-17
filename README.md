@@ -1,3 +1,5 @@
+Online bookstore built by Ruby on Rails:
+
 Start the server: rails server
 
 /products to see the host view.
